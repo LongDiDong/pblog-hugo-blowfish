@@ -3,3 +3,7 @@
 /resources/
 /.hugo_build.lock
 .DS_Store
+
+# Windows ADS junk (keep Obsidian .obsidian/)
+**/Zone.Identifier
+**/*:Zone.Identifier

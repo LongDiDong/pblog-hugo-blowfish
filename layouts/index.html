@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="home-layout">
+    <div class="home-sidebar-wrap">
+      {{ partial "home/sidebar.html" (dict "showCount" true) }}
+    </div>
+    <section class="home-main">
+      {{ with .Content }}
+        <div class="prose dark:prose-invert mb-6 max-w-none">
+          {{ . }}
+        </div>
+      {{ end }}
+      {{ partial "recent-articles/home.html" . }}
+    </section>
+  </div>
+{{ end }}

@@ -4,6 +4,11 @@
   weight = 10
 
 [[main]]
+  name = "精华"
+  pageRef = "collections/精华"
+  weight = 15
+
+[[main]]
   name = "标签"
   pageRef = "tags"
   weight = 20
@@ -13,12 +18,8 @@
   pageRef = "categories"
   weight = 30
 
-[[footer]]
-  name = "标签"
-  pageRef = "tags"
-  weight = 10
-
-[[footer]]
-  name = "分类"
-  pageRef = "categories"
-  weight = 20
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/LongDiDong"
+  weight = 40

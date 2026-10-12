@@ -3,7 +3,8 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-baseURL = "https://longdidong.github.io/pblog-hugo-blowfish/"
+# Local preview. Change to your EdgeOne / custom domain before production deploy.
+baseURL = "http://127.0.0.1:1313/"
 defaultContentLanguage = "zh-cn"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
@@ -15,6 +16,9 @@ buildDrafts = false
 buildFuture = false
 
 enableEmoji = true
+
+# Ignore Obsidian vault metadata and Windows Alternate Data Stream markers.
+ignoreFiles = ['\\.obsidian(/.*)?$', '.*Zone\\.Identifier$']
 
 # googleAnalytics = "G-XXXXXXXXX"
 
@@ -29,6 +33,7 @@ enableEmoji = true
   category = "categories"
   author = "authors"
   series = "series"
+  collection = "collections"
 
 [sitemap]
   changefreq = 'daily'

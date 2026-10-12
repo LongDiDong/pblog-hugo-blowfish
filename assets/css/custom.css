@@ -1,0 +1,83 @@
+/* Homepage: left sidebar + main articles */
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.home-sidebar-wrap {
+  width: 100%;
+}
+
+.home-sidebar {
+  text-align: start;
+}
+
+.home-author-name {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.home-author-headline {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.home-sidebar-categories {
+  margin-bottom: 4.5rem;
+}
+
+.home-main {
+  min-width: 0;
+  flex: 1 1 auto;
+  margin-top: 1.75rem; /* keep "最近的文章" below the author block */
+}
+
+.home-articles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.article-link--card h2 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .home-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .home-sidebar-wrap {
+    position: sticky;
+    top: 8.75rem; /* clears floating header */
+    flex: 0 0 12.5rem;
+    width: 12.5rem;
+    max-width: 12.5rem;
+    margin-top: -0.35rem;
+  }
+
+  .home-main {
+    margin-top: 2.25rem;
+  }
+
+  .home-sidebar {
+    padding-inline-end: 0.75rem;
+    border-inline-end: 1px solid rgb(64 64 64 / 0.35);
+  }
+
+  html:not(.dark) .home-sidebar {
+    border-inline-end-color: rgb(229 229 229 / 0.9);
+  }
+
+  .home-articles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

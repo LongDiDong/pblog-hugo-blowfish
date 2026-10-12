@@ -1,0 +1,37 @@
+{{ $recentArticles := 5 }}
+{{ $showMoreLinkDest := "/posts/" }}
+{{ if .Site.Params.homepage.showRecent | default false }}
+  {{ with index .Site.Params.homepage "showRecentItems" }}
+    {{ $recentArticles = . }}
+  {{ end }}
+
+  <h2 class="mb-6 text-xl font-extrabold">{{ i18n "shortcode.recent_articles" | emojify }}</h2>
+
+  {{ if .Site.Params.homepage.cardView | default false }}
+    <section class="home-articles-grid">
+      {{ range first $recentArticles (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)).Pages }}
+        {{ partial "article-link/card.html" . }}
+      {{ end }}
+    </section>
+  {{ else }}
+    <section class="space-y-8">
+      {{ range first $recentArticles (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)).Pages }}
+        {{ partial "article-link/simple.html" . }}
+      {{ end }}
+    </section>
+  {{ end }}
+
+  {{ if .Site.Params.homepage.showMoreLink | default false }}
+    {{ with index .Site.Params.homepage "showMoreLinkDest" }}
+      {{ $showMoreLinkDest = . }}
+    {{ end }}
+    <div class="mt-8">
+      <a href="{{ $showMoreLinkDest | relLangURL }}">
+        <button
+          class="rounded border border-primary-500 bg-transparent px-4 py-2 font-semibold prose dark:prose-invert hover:border-transparent hover:text-primary-500">
+          {{ i18n "recent.show_more" | markdownify }}
+        </button>
+      </a>
+    </div>
+  {{ end }}
+{{ end }}

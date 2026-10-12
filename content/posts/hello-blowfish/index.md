@@ -4,6 +4,7 @@ date: 2026-10-12T14:00:00+08:00
 draft: false
 tags: ["Hugo", "Blowfish"]
 categories: ["博客"]
+collections: ["精华"]
 summary: "这是用 Hugo + Blowfish 搭建个人博客后的第一篇文章。"
 ---
 

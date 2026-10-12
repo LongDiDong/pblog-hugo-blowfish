@@ -15,7 +15,8 @@ title = "Ming's Blog"
   name = "Ming"
   # image = "img/avatar.jpg"
   headline = "记录学习与生活"
-  bio = "用 Hugo + Blowfish 搭建的个人站点。"
-  links = [
-    { github = "https://github.com/LongDiDong" },
-  ]
+  # bio = ""
+  # 社交图标已放到顶栏菜单（menus.zh-cn.toml）
+  # links = [
+  #   { github = "https://github.com/LongDiDong" },
+  # ]

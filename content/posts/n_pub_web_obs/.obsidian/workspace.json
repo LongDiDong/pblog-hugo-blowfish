@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "71f36b9febc33f93",
+    "type": "split",
+    "children": [
+      {
+        "id": "59ea9b7b38733b89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d11181b1c7189b95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "旅游攻略/杭州/杭州徒步-九溪至满觉陇.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "杭州徒步-九溪至满觉陇"
+            }
+          },
+          {
+            "id": "04a7b7d251456c08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "旅游攻略/26-国庆海边自驾.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "26-国庆海边自驾"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "df39e57082327094",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b54135b6376749e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "32f780bcd66a331b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "949340cbb60c688d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:徒步",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "27ea7502d09e12ee",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "084f9a8016014199",
+    "type": "split",
+    "children": [
+      {
+        "id": "5144c6ad467679b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69de5b0d5430e51f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "旅游攻略/杭州/杭州徒步-于谦祠至满觉陇.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "杭州徒步-于谦祠至满觉陇 的反向链接列表"
+            }
+          },
+          {
+            "id": "79858acb3a118d51",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2.中医/1.倪海厦/倪海厦体系顺序.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "倪海厦体系顺序 的出链列表"
+            }
+          },
+          {
+            "id": "b90afd0b59522587",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "a963587d62e65bb8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "旅游攻略/成都/25国庆成都-川西自驾攻略.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "25国庆成都-川西自驾攻略 的大纲"
+            }
+          },
+          {
+            "id": "dd1029557f8f2496",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "04a7b7d251456c08",
+  "lastOpenFiles": [
+    "first.md",
+    "旅游攻略/26-国庆海边自驾.md",
+    "旅游攻略/杭州/未命名.md",
+    "旅游攻略/杭州/杭州徒步-九溪至满觉陇.md",
+    "旅游攻略/成都/25成都川西要点总结.md",
+    "旅游攻略/成都/25国庆川西自驾Todo.md",
+    "旅游攻略/成都/25国庆川西自驾Todo.m.md",
+    "摄影参数/1.星空摄影/延时摄影要点.md",
+    "摄影参数/1.星空摄影/星空摄影参数.md",
+    "摄影参数/1.星空摄影",
+    "摄影参数",
+    "2025新闻/2.国际/贸易战对美国的杀伤力远大于中国 - 纽约时报.md",
+    "旅游攻略/成都/25国庆成都-川西自驾TodoList.md",
+    "旅游攻略/成都/25国庆成都-川西自驾攻略.md",
+    "2025新闻/1.国内/4月/未命名 1.base",
+    "2025新闻/1.国内/4月/未命名.base",
+    "2025新闻/1.国内/4月/06版经济 - 上扬！我国外贸首季平稳开局.md",
+    "2025新闻/1.国内/4月/01版要闻 - 人形机器人加速进化.md",
+    "旅游攻略/杭州/杭州徒步-于谦祠至满觉陇.md",
+    "旅游攻略/杭州/杭州徒步-于谦祠至九溪.md",
+    "pub_bos/first.md",
+    "pub_bos/旅游攻略/杭州/杭州徒步-于谦祠至满觉陇.md",
+    "pub_bos/旅游攻略/杭州/杭州徒步-于谦祠至九溪.md",
+    "pub_bos/旅游攻略/杭州/杭州徒步-九溪至满觉陇.md",
+    "pub_bos/旅游攻略/成都/25国庆成都-川西自驾TodoList.md",
+    "pub_bos/旅游攻略/成都/25国庆成都-川西自驾攻略.md",
+    "pub_bos/旅游攻略/杭州",
+    "pub_bos/旅游攻略/成都",
+    "pub_bos/旅游攻略",
+    "pub_bos/2025新闻/1.国内/4月/06版经济 - 上扬！我国外贸首季平稳开局.md",
+    "pub_bos/2025新闻/1.国内/4月/01版要闻 - 人形机器人加速进化.md",
+    "pub_bos/2025新闻/1.国内/4月",
+    "pub_bos/2025新闻/2.国际/贸易战对美国的杀伤力远大于中国 - 纽约时报.md",
+    "pub_bos/2025新闻/1.国内",
+    "pub_bos/2025新闻/2.国际",
+    "pub_bos/欢迎.md",
+    "markdown-syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg",
+    "chinese-test/florian-klauer-nptLmg6jqDo-unsplash.jpg",
+    "chinese-test/helena-hertz-wWZzXlDpMog-unsplash.jpg",
+    "placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg"
+  ]
+}
