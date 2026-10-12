@@ -14,7 +14,7 @@ cover:
 description: 
 author: 
 date: 2025-04-24
-date modified: 2025-09-28
+lastmod: 2025-09-28
 aliases: 
 image: 
 ---

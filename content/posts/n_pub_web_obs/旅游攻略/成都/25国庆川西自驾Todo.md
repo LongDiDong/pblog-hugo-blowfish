@@ -9,7 +9,7 @@ tags:
 description:
 author: "[[行笃]]"
 date: 2025-09-28
-date modified: 2025-09-28
+lastmod: 2025-09-28
 ---
 
 ## 基础物资

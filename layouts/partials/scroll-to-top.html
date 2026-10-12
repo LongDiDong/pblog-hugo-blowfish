@@ -1,0 +1,41 @@
+{{ $isRTL := .Site.Params.rtl | default false }}
+{{ $coffeeIsRight := and (eq (lower site.Params.buymeacoffee.globalWidgetPosition) "right") .Site.Params.buymeacoffee.globalWidget }}
+{{ if not $coffeeIsRight }}
+  {{ $coffeeIsRight = false }}
+{{ end }}
+
+{{ $needAvoidCoffee := ne $coffeeIsRight $isRTL }}
+
+{{ $kofiEnabled := .Site.Params.kofi.globalWidget | default false }}
+{{ $needAvoidKofi := and $kofiEnabled $isRTL }}
+{{ $needExtraOffset := or $needAvoidCoffee $needAvoidKofi }}
+
+{{ $toTopYOffset := cond $needExtraOffset "bottom-24" "bottom-6" }}
+
+{{ if not .IsHome }}
+<a
+  href="{{ "" | relLangURL }}"
+  class="site-float-btn site-float-btn--home pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full"
+  aria-label="返回主页"
+  title="返回主页">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M3.5 10.5 12 3.8l8.5 6.7" />
+    <path d="M6 9.8V19.2h12V9.8" />
+    <path d="M10 19.2v-5.2h4v5.2" />
+  </svg>
+</a>
+{{ end }}
+
+<div
+  id="scroll-to-top"
+  class="site-float-actions fixed {{ $toTopYOffset }} end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="site-float-btn pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full"
+    aria-label="{{ i18n "nav.scroll_to_top_title" }}"
+    title="{{ i18n "nav.scroll_to_top_title" }}">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 14.5 12 8.5l6 6" />
+    </svg>
+  </a>
+</div>
