@@ -10,6 +10,7 @@ description:
 author: "[[行笃]]"
 date: 2025-09-28
 lastmod: 2025-09-28
+date modified: 2026-10-12
 ---
 
 ## 基础物资
