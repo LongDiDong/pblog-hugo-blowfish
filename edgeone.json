@@ -1,0 +1,5 @@
+{
+  "hugoVersion": "0.167.0",
+  "buildCommand": "git submodule update --init --recursive && hugo --minify -e production",
+  "outputDirectory": "public"
+}

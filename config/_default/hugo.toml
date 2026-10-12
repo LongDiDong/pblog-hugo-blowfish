@@ -3,7 +3,8 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-# Local preview. Change to your EdgeOne / custom domain before production deploy.
+# Local preview default. Production uses config/production/hugo.toml via
+# `hugo -e production` (see edgeone.json).
 baseURL = "http://127.0.0.1:1313/"
 defaultContentLanguage = "zh-cn"
 

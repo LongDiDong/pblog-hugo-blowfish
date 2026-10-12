@@ -1,0 +1,6 @@
+# Production overrides for EdgeOne Pages / public deploy.
+# Prefer setting the real site URL in EdgeOne env var HUGO_BASEURL, then change
+# buildCommand to: hugo --minify -e production --baseURL "$HUGO_BASEURL"
+# Or replace the value below with your EdgeOne domain after first deploy.
+baseURL = "/"
+relativeURLs = true
