@@ -6,10 +6,11 @@ categories:
 tags:
   - 川西自驾
   - 川西小环线
+collections:
 description:
-author: "[[行笃]]"
+author: 行笃
 date: 2025-09-28
-lastmod: 2025-09-28
+lastmod: 2026-10-12
 date modified: 2026-10-12
 ---
 
