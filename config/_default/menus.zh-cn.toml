@@ -5,7 +5,7 @@
 
 [[main]]
   name = "精华"
-  pageRef = "collections/精华"
+  pageRef = "collections/featured"
   weight = 15
 
 [[main]]

@@ -1,10 +1,11 @@
 ---
 cssclasses:
 title: first
+url: "/posts/notes/first/"
 categories:
-  - 通用技术
+  - general-tech
 tags:
-  - 博客搭建
+  - blog-setup
 math: true
 cover:
   image: <https://amown.cn/PicGo/cover.png>
