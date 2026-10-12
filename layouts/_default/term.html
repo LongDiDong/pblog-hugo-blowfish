@@ -1,5 +1,12 @@
 {{ define "main" }}
   {{ .Scratch.Set "scope" "term" }}
+  {{ if eq .Data.Plural "collections" }}
+    <div class="page-atmosphere page-atmosphere--collection" aria-hidden="true"></div>
+  {{ else if eq .Data.Plural "tags" }}
+    <div class="page-atmosphere page-atmosphere--tags" aria-hidden="true"></div>
+  {{ else if eq .Data.Plural "categories" }}
+    <div class="page-atmosphere page-atmosphere--categories" aria-hidden="true"></div>
+  {{ end }}
   {{ $showHero := .Params.showHero | default site.Params.term.showHero | default false }}
   {{ if $showHero }}
     {{ $heroStyle := print "hero/" site.Params.term.heroStyle ".html" }}

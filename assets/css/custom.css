@@ -1,3 +1,136 @@
+/* Shared page atmosphere — same blue wash + grain; silk shape differs by page */
+body:has(.home-layout),
+body:has(.page-atmosphere--posts),
+body:has(.page-atmosphere--collection),
+body:has(.page-atmosphere--tags),
+body:has(.page-atmosphere--categories) {
+  background-color: #e2ecf7;
+  background-image:
+    radial-gradient(ellipse 95% 60% at 0% -5%, rgb(95 165 245 / 0.58), transparent 60%),
+    radial-gradient(ellipse 75% 50% at 100% 0%, rgb(125 190 250 / 0.45), transparent 55%),
+    radial-gradient(ellipse 60% 55% at 55% 45%, rgb(160 205 255 / 0.26), transparent 62%),
+    radial-gradient(ellipse 70% 55% at 85% 105%, rgb(110 165 225 / 0.42), transparent 58%),
+    linear-gradient(165deg, #eef5fc 0%, #dce8f5 45%, #d0dff0 100%);
+  background-attachment: fixed;
+}
+
+body:has(.home-layout)::before,
+body:has(.page-atmosphere--posts)::before,
+body:has(.page-atmosphere--collection)::before,
+body:has(.page-atmosphere--tags)::before,
+body:has(.page-atmosphere--categories)::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.42;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+html.dark body:has(.home-layout),
+html.dark body:has(.page-atmosphere--posts),
+html.dark body:has(.page-atmosphere--collection),
+html.dark body:has(.page-atmosphere--tags),
+html.dark body:has(.page-atmosphere--categories) {
+  background-color: #0a1220;
+  background-image:
+    radial-gradient(ellipse 95% 60% at 0% -5%, rgb(50 120 210 / 0.55), transparent 60%),
+    radial-gradient(ellipse 75% 50% at 100% 0%, rgb(40 100 185 / 0.42), transparent 55%),
+    radial-gradient(ellipse 60% 55% at 55% 45%, rgb(35 85 155 / 0.3), transparent 62%),
+    radial-gradient(ellipse 70% 55% at 85% 105%, rgb(25 70 140 / 0.48), transparent 58%),
+    linear-gradient(165deg, #0d1730 0%, #0b1528 45%, #09121f 100%);
+}
+
+html.dark body:has(.home-layout)::before,
+html.dark body:has(.page-atmosphere--posts)::before,
+html.dark body:has(.page-atmosphere--collection)::before,
+html.dark body:has(.page-atmosphere--tags)::before,
+html.dark body:has(.page-atmosphere--categories)::before {
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+/* Silk base layer styles */
+body:has(.home-layout)::after,
+body:has(.page-atmosphere--posts)::after,
+body:has(.page-atmosphere--collection)::after,
+body:has(.page-atmosphere--tags)::after,
+body:has(.page-atmosphere--categories)::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.88;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html.dark body:has(.home-layout)::after,
+html.dark body:has(.page-atmosphere--posts)::after,
+html.dark body:has(.page-atmosphere--collection)::after,
+html.dark body:has(.page-atmosphere--tags)::after,
+html.dark body:has(.page-atmosphere--categories)::after {
+  opacity: 0.72;
+}
+
+/* Home — inverted-phase S */
+body:has(.home-layout)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 160 C 200 260, 400 60, 600 160 S 1000 280, 1280 140' stroke='%233b82f6' stroke-width='1.25' opacity='0.4'/%3E%3Cpath d='M-80 400 C 220 500, 420 300, 620 400 S 1020 520, 1280 380' stroke='%2360a5fa' stroke-width='1.1' opacity='0.36'/%3E%3Cpath d='M-80 640 C 240 740, 440 540, 640 640 S 1040 760, 1280 620' stroke='%2393c5fd' stroke-width='1' opacity='0.34'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html.dark body:has(.home-layout)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 160 C 200 260, 400 60, 600 160 S 1000 280, 1280 140' stroke='%2393c5fd' stroke-width='1.25' opacity='0.36'/%3E%3Cpath d='M-80 400 C 220 500, 420 300, 620 400 S 1020 520, 1280 380' stroke='%2360a5fa' stroke-width='1.1' opacity='0.32'/%3E%3Cpath d='M-80 640 C 240 740, 440 540, 640 640 S 1040 760, 1280 620' stroke='%23bfdbfe' stroke-width='1' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Atmosphere marker (zero footprint) */
+.page-atmosphere {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Posts — classic horizontal S */
+body:has(.page-atmosphere--posts)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 160 C 200 60, 400 260, 600 160 S 1000 40, 1280 140' stroke='%233b82f6' stroke-width='1.25' opacity='0.4'/%3E%3Cpath d='M-80 400 C 220 300, 420 500, 620 400 S 1020 280, 1280 380' stroke='%2360a5fa' stroke-width='1.1' opacity='0.36'/%3E%3Cpath d='M-80 640 C 240 540, 440 740, 640 640 S 1040 520, 1280 620' stroke='%2393c5fd' stroke-width='1' opacity='0.34'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html.dark body:has(.page-atmosphere--posts)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 160 C 200 60, 400 260, 600 160 S 1000 40, 1280 140' stroke='%2393c5fd' stroke-width='1.25' opacity='0.36'/%3E%3Cpath d='M-80 400 C 220 300, 420 500, 620 400 S 1020 280, 1280 380' stroke='%2360a5fa' stroke-width='1.1' opacity='0.32'/%3E%3Cpath d='M-80 640 C 240 540, 440 740, 640 640 S 1040 520, 1280 620' stroke='%23bfdbfe' stroke-width='1' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Collections — longer-wave, gentler S */
+body:has(.page-atmosphere--collection)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 180 C 320 80, 560 280, 800 160 S 1100 80, 1280 200' stroke='%233b82f6' stroke-width='1.2' opacity='0.38'/%3E%3Cpath d='M-80 410 C 300 320, 560 520, 820 400 S 1120 320, 1280 430' stroke='%2360a5fa' stroke-width='1.05' opacity='0.34'/%3E%3Cpath d='M-80 640 C 280 560, 560 760, 840 640 S 1140 560, 1280 660' stroke='%2393c5fd' stroke-width='0.95' opacity='0.32'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html.dark body:has(.page-atmosphere--collection)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 180 C 320 80, 560 280, 800 160 S 1100 80, 1280 200' stroke='%2393c5fd' stroke-width='1.2' opacity='0.34'/%3E%3Cpath d='M-80 410 C 300 320, 560 520, 820 400 S 1120 320, 1280 430' stroke='%2360a5fa' stroke-width='1.05' opacity='0.3'/%3E%3Cpath d='M-80 640 C 280 560, 560 760, 840 640 S 1140 560, 1280 660' stroke='%23bfdbfe' stroke-width='0.95' opacity='0.28'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Tags — denser, shorter-wavelength S */
+body:has(.page-atmosphere--tags)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 140 C 120 40, 240 240, 360 140 S 600 20, 720 140 S 960 260, 1080 140 S 1220 40, 1280 120' stroke='%233b82f6' stroke-width='1.15' opacity='0.38'/%3E%3Cpath d='M-80 390 C 120 290, 240 490, 360 390 S 600 270, 720 390 S 960 510, 1080 390 S 1220 290, 1280 370' stroke='%2360a5fa' stroke-width='1.05' opacity='0.34'/%3E%3Cpath d='M-80 640 C 120 540, 240 740, 360 640 S 600 520, 720 640 S 960 760, 1080 640 S 1220 540, 1280 620' stroke='%2393c5fd' stroke-width='0.95' opacity='0.32'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html.dark body:has(.page-atmosphere--tags)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 140 C 120 40, 240 240, 360 140 S 600 20, 720 140 S 960 260, 1080 140 S 1220 40, 1280 120' stroke='%2393c5fd' stroke-width='1.15' opacity='0.34'/%3E%3Cpath d='M-80 390 C 120 290, 240 490, 360 390 S 600 270, 720 390 S 960 510, 1080 390 S 1220 290, 1280 370' stroke='%2360a5fa' stroke-width='1.05' opacity='0.3'/%3E%3Cpath d='M-80 640 C 120 540, 240 740, 360 640 S 600 520, 720 640 S 960 760, 1080 640 S 1220 540, 1280 620' stroke='%23bfdbfe' stroke-width='0.95' opacity='0.28'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Categories — wider vertical spacing, mild diagonal drift */
+body:has(.page-atmosphere--categories)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 100 C 220 20, 420 200, 620 90 S 980 0, 1280 130' stroke='%233b82f6' stroke-width='1.2' opacity='0.38'/%3E%3Cpath d='M-80 400 C 220 320, 420 500, 620 390 S 980 300, 1280 430' stroke='%2360a5fa' stroke-width='1.05' opacity='0.34'/%3E%3Cpath d='M-80 700 C 220 620, 420 800, 620 690 S 980 600, 1280 730' stroke='%2393c5fd' stroke-width='0.95' opacity='0.32'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html.dark body:has(.page-atmosphere--categories)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-80 100 C 220 20, 420 200, 620 90 S 980 0, 1280 130' stroke='%2393c5fd' stroke-width='1.2' opacity='0.34'/%3E%3Cpath d='M-80 400 C 220 320, 420 500, 620 390 S 980 300, 1280 430' stroke='%2360a5fa' stroke-width='1.05' opacity='0.3'/%3E%3Cpath d='M-80 700 C 220 620, 420 800, 620 690 S 980 600, 1280 730' stroke='%23bfdbfe' stroke-width='0.95' opacity='0.28'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 /* Homepage: left sidebar + main articles */
 .home-layout {
   display: flex;

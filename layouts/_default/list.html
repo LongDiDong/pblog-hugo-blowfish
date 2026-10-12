@@ -2,6 +2,9 @@
   {{ .Scratch.Set "scope" "list" }}
   {{ $enableToc := .Params.showTableOfContents | default (site.Params.list.showTableOfContents | default false) }}
   {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
+  {{ if eq .Section "posts" }}
+    <div class="page-atmosphere page-atmosphere--posts" aria-hidden="true"></div>
+  {{ end }}
 
   {{/* Hero */}}
   {{ if site.Params.list.showHero | default false }}

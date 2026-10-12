@@ -2,6 +2,7 @@
 title: "你好，Blowfish"
 date: 2026-10-12T14:00:00+08:00
 draft: false
+author: "行笃"
 tags: ["Hugo", "Blowfish"]
 categories: ["博客"]
 collections: ["精华"]

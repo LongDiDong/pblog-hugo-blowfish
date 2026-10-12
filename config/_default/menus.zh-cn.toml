@@ -9,13 +9,13 @@
   weight = 15
 
 [[main]]
-  name = "标签"
-  pageRef = "tags"
+  name = "分类"
+  pageRef = "categories"
   weight = 20
 
 [[main]]
-  name = "分类"
-  pageRef = "categories"
+  name = "标签"
+  pageRef = "tags"
   weight = 30
 
 [[main]]
