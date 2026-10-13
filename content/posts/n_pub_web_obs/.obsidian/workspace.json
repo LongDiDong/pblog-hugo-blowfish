@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "旅游攻略/26-国庆青岛.md",
+                "file": "旅游攻略/青岛/26-国庆青岛.md",
                 "mode": "source",
                 "source": true
               },
@@ -182,10 +182,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1db6dff4a953460f",
+  "active": "32f780bcd66a331b",
   "lastOpenFiles": [
+    "旅游攻略/青岛",
     "旅游攻略/成都/25国庆川西自驾Todo.md",
-    "旅游攻略/26-国庆青岛.md",
+    "旅游攻略/青岛/26-国庆青岛.md",
     "旅游攻略/成都/25成都川西要点总结.md",
     "摄影参数/1.星空摄影/星空摄影参数.md",
     "摄影参数/1.星空摄影/延时摄影要点.md",
@@ -219,7 +220,6 @@
     "pub_bos/2025新闻/2.国际/贸易战对美国的杀伤力远大于中国 - 纽约时报.md",
     "pub_bos/2025新闻/1.国内",
     "pub_bos/2025新闻/2.国际",
-    "pub_bos/欢迎.md",
     "markdown-syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg",
     "chinese-test/florian-klauer-nptLmg6jqDo-unsplash.jpg",
     "chinese-test/helena-hertz-wWZzXlDpMog-unsplash.jpg",
