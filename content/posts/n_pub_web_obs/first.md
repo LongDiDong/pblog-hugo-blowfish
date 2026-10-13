@@ -1,11 +1,11 @@
 ---
 cssclasses:
 title: first
-url: "/posts/notes/first/"
+url: "/posts/笔记/first/"
 categories:
-  - general-tech
+  - 通用技术
 tags:
-  - blog-setup
+  - 博客搭建
 math: true
 cover:
   image: <https://amown.cn/PicGo/cover.png>
@@ -17,6 +17,7 @@ author:
 date: 2025-04-24
 lastmod: 2025-09-28
 aliases: 
+  - /posts/notes/first/
 image: 
 ---
 

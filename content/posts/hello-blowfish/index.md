@@ -1,12 +1,14 @@
 ---
 title: "你好，Blowfish"
-url: "/posts/hello-blowfish/"
+url: "/posts/你好Blowfish/"
+aliases:
+  - /posts/hello-blowfish/
 date: 2026-10-12T14:00:00+08:00
 draft: false
 author: "行笃"
-tags: ["hugo", "blowfish"]
-categories: ["blog"]
-collections: ["featured"]
+tags: [hugo, blowfish]
+categories: [博客]
+collections: [精华]
 summary: "这是用 Hugo + Blowfish 搭建个人博客后的第一篇文章。"
 ---
 

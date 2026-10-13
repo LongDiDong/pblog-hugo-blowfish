@@ -1,12 +1,14 @@
 ---
 cssclasses:
 title: 25国庆川西自驾Todo
-url: "/posts/travel/2025-chuanxi-drive-todo/"
+url: "/posts/旅游攻略/25国庆川西自驾Todo/"
+aliases:
+  - /posts/travel/2025-chuanxi-drive-todo/
 categories:
-  - sichuan-travel
+  - 四川旅行
 tags:
-  - chuanxi-drive
-  - chuanxi-loop
+  - 川西自驾
+  - 川西小环线
 collections:
 description:
 author: 行笃
