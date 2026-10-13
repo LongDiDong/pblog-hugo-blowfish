@@ -1,0 +1,11 @@
+{{ if .IsPage }}
+  {{ $alg := .Site.Params.fingerprintAlgorithm | default "sha512" }}
+  {{ with resources.Get "lib/qrcode/qrcode.js" }}
+    {{ $qr := . | resources.Minify | resources.Fingerprint $alg }}
+    <script defer src="{{ $qr.RelPermalink }}" integrity="{{ $qr.Data.Integrity }}"></script>
+  {{ end }}
+  {{ with resources.Get "js/share-menu.js" }}
+    {{ $share := . | resources.Minify | resources.Fingerprint $alg }}
+    <script defer src="{{ $share.RelPermalink }}" integrity="{{ $share.Data.Integrity }}"></script>
+  {{ end }}
+{{ end }}

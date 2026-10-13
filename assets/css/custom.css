@@ -301,3 +301,197 @@ html.dark .site-float-btn:hover {
     );
   border-color: rgb(110 160 230 / 0.65);
 }
+
+/* Article share: floating entry (below home) → copy link / copy QR */
+.article-share {
+  position: fixed;
+  top: 9.25rem;
+  inset-inline-end: 1.5rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+  pointer-events: none;
+}
+
+.article-share__bar,
+.article-share__entry,
+.article-share__menu,
+.article-share__qr-panel,
+.article-share__toast {
+  pointer-events: auto;
+}
+
+.article-share__bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.article-share__entry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 9999px;
+}
+
+.article-share__entry-icon,
+.article-share__action-icon {
+  display: inline-flex;
+  width: 1.15rem;
+  height: 1.15rem;
+  color: inherit;
+}
+
+.article-share__entry-icon .icon,
+.article-share__action-icon .icon,
+.article-share__entry-icon svg,
+.article-share__action-icon svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.article-share__menu {
+  position: absolute;
+  top: 0;
+  inset-inline-end: calc(100% + 0.55rem);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 9.5rem;
+  padding: 0.45rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(148 163 184 / 0.35);
+  background: rgb(248 250 252 / 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 28px rgb(15 23 42 / 0.14);
+  transform: translateX(6px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.article-share.is-open .article-share__menu:not([hidden]) {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0) scale(1);
+}
+
+.article-share__menu[hidden] {
+  display: none;
+}
+
+.article-share__action {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(148 163 184 / 0.35);
+  background: rgb(255 255 255 / 0.72);
+  color: rgb(30 58 95);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.55rem 0.75rem;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.article-share__action:hover {
+  color: rgb(20 50 90);
+  background: rgb(219 234 254 / 0.9);
+  border-color: rgb(125 160 210 / 0.55);
+  transform: translateY(-1px);
+}
+
+.article-share__qr-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(148 163 184 / 0.35);
+  background: rgb(248 250 252 / 0.92);
+  box-shadow: 0 12px 28px rgb(15 23 42 / 0.14);
+}
+
+.article-share__qr-panel[hidden] {
+  display: none;
+}
+
+.article-share__qr-panel canvas {
+  width: 160px;
+  height: 160px;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.article-share__qr-hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgb(100 116 139);
+}
+
+.article-share__toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 80;
+  transform: translateX(-50%) translateY(8px);
+  padding: 0.55rem 0.9rem;
+  border-radius: 9999px;
+  background: rgb(15 23 42 / 0.88);
+  color: rgb(248 250 252);
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.article-share__toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.article-share__toast[hidden] {
+  display: none;
+}
+
+html.dark .article-share__menu,
+html.dark .article-share__qr-panel {
+  background: rgb(30 41 59 / 0.92);
+  border-color: rgb(71 85 105 / 0.55);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.35);
+}
+
+html.dark .article-share__action {
+  color: rgb(226 232 240);
+  background: rgb(51 65 85 / 0.72);
+  border-color: rgb(71 85 105 / 0.55);
+}
+
+html.dark .article-share__action:hover {
+  color: rgb(248 250 252);
+  background: rgb(51 80 120 / 0.85);
+}
+
+html.dark .article-share__qr-hint {
+  color: rgb(148 163 184);
+}

@@ -1,0 +1,48 @@
+{{/* Floating share: one entry → copy link / copy QR. Overrides theme sharing-links. */}}
+<section
+  class="article-share print:hidden"
+  data-share-root
+  data-url="{{ .Permalink }}"
+  data-title="{{ .Title | plainify }}">
+  <div class="article-share__bar">
+    <button
+      type="button"
+      class="article-share__entry site-float-btn"
+      data-share-toggle
+      aria-expanded="false"
+      aria-controls="article-share-menu"
+      aria-haspopup="true"
+      aria-label="分享"
+      title="分享">
+      <span class="article-share__entry-icon" aria-hidden="true">
+        {{ partial "icon.html" "share" }}
+      </span>
+    </button>
+
+    <div
+      id="article-share-menu"
+      class="article-share__menu"
+      data-share-menu
+      hidden>
+      <button type="button" class="article-share__action" data-share-copy-link>
+        <span class="article-share__action-icon" aria-hidden="true">
+          {{ partial "icon.html" "link" }}
+        </span>
+        <span>复制链接</span>
+      </button>
+      <button type="button" class="article-share__action" data-share-copy-qr>
+        <span class="article-share__action-icon" aria-hidden="true">
+          {{ partial "icon.html" "image" }}
+        </span>
+        <span>复制二维码</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="article-share__qr-panel" data-share-qr-panel hidden>
+    <canvas data-share-qr-canvas width="180" height="180" aria-label="文章链接二维码"></canvas>
+    <p class="article-share__qr-hint" data-share-qr-hint>长按或扫码分享</p>
+  </div>
+
+  <div class="article-share__toast" data-share-toast hidden role="status" aria-live="polite"></div>
+</section>
