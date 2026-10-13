@@ -1,7 +1,6 @@
 ---
 cssclasses:
 title: first
-url: "/posts/笔记/first/"
 categories:
   - 通用技术
 tags:
@@ -16,8 +15,6 @@ description:
 author: 
 date: 2025-04-24
 lastmod: 2025-09-28
-aliases: 
-  - /posts/notes/first/
 image: 
 ---
 

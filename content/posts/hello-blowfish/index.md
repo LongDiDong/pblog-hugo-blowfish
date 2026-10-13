@@ -1,8 +1,5 @@
 ---
 title: "你好，Blowfish"
-url: "/posts/你好Blowfish/"
-aliases:
-  - /posts/hello-blowfish/
 date: 2026-10-12T14:00:00+08:00
 draft: false
 author: "行笃"

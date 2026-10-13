@@ -21,6 +21,35 @@ enableEmoji = true
 # Ignore Obsidian vault metadata and Windows Alternate Data Stream markers.
 ignoreFiles = ['\\.obsidian(/.*)?$', '.*Zone\\.Identifier$']
 
+# Keep Obsidian vault at content/posts/n_pub_web_obs, but publish it as /posts/...
+# so new notes don't need a custom `url` field.
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+    files = ["! posts/n_pub_web_obs", "! posts/n_pub_web_obs/**", "**"]
+  [[module.mounts]]
+    source = "content/posts/n_pub_web_obs"
+    target = "content/posts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
